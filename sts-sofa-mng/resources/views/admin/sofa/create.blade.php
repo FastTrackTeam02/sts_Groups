@@ -12,29 +12,27 @@
 
 @section('content')
 
-
 <div class="container">
-
-    <form method="POST" action="{{ route('sofa-update')}}" enctype="multipart/form-data" >
-    @foreach ($sofas as $sofa)
+<div class="row justify-content-center">
+<div class="col-10 col-md-6">
+    <form method="POST" action="{{ route('admin_sofa-store')}}" enctype="multipart/form-data" >
     @csrf
     @method('POST')
-    <input name="id" type="hidden" value="{{ $sofa->id }}">
         <div class="form-group">
             <label>Mã sản phẩm</label>
-            <input name="masofa" type="text" class="form-control" placeholder="" value="{{ $sofa->masofa }}">
+            <input name="masofa" type="text" class="form-control" placeholder="">
         </div>
         <div class="form-group">
             <label>Tên sản phẩm</label>
-            <input name="name" type="text" class="form-control" placeholder="" value="{{ $sofa->name }}">
+            <input name="name" type="text" class="form-control" placeholder="">
         </div>
         <div class="form-group">
             <label>Giá</label>
-            <input name="gia" type="text" class="form-control" placeholder="" value="{{ $sofa->gia }}">
+            <input name="gia" type="text" class="form-control" placeholder="">
         </div>
         <div class="form-group">
             <label>Khuyến mãi</label>
-            <input name="khuyenmai" type="text" class="form-control" placeholder="Nhập số tiền được giảm" value="{{ $sofa->khuyenmai }}">
+            <input name="khuyenmai" type="text" class="form-control" placeholder="Nhập số tiền được giảm">
         </div>
         <div class="form-group">
             <label>Loại sản phẩm</label>
@@ -52,15 +50,23 @@
         </div>
         <div class="form-group">
             <label for="detail">Chi tiết sản phẩm</label>
-            <textarea class="form-control" rows="5" name="detail">{{ $sofa->detail }}</textarea>
+            <textarea class="form-control" rows="5" name="detail">
+►Kích thước : 2600 x 1600 x 1000 (Dài x Rộng x Cao)
+
+►Chất liệu :  da nhập khẩu cao cấp, mềm mịn thoáng mát.
+
+►Khung ghế : Khung gỗ dầu tự nhiên chống mối mọt.
+
+►Đệm mút : Nệm mousse D40 không xẹp lún.
+
+►Chân ghế : inox
+</textarea>
         </div>
 
 
 
     <button type="submit" class="btn btn-primary">Lưu</button>
-    @endforeach
     </form>
-
 </div>
-
+</div></div>
 @endsection

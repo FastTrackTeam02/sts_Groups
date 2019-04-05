@@ -17,7 +17,7 @@
 @foreach ($sofas as $sofa)
 <div class="row">
     <div class="col-12 my-3">
-        <a class="" href="{{ route('sofa-edit',['id' => $sofa->id]) }}"><button type="button" class="btn btn-primary">Chỉnh sửa</button></a>
+        <a class="" href="{{ route('admin_sofa-edit',['id' => $sofa->id]) }}"><button type="button" class="btn btn-primary">Chỉnh sửa</button></a>
     </div>
 </div>
 <table class="table table-bordered">

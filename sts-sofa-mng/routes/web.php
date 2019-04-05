@@ -19,13 +19,12 @@ Route::get('/', function () {
 Route::prefix('admin')->group(function () {
 
 
-    Route::get('sofa', 'SofaController@list')->name('sofa');
-    Route::get('sofa/create', 'SofaController@create')->name('sofa-create');
-    Route::post('sofa/store', 'SofaController@store')->name('sofa-store');
-    Route::get('sofa/edit', 'SofaController@edit')->name('sofa-edit');
-    Route::post('sofa/update', 'SofaController@update')->name('sofa-update');
-    Route::get('sofa/delete', 'SofaController@delete')->name('sofa-delete');
-    Route::get('sofa/show', 'SofaController@show')->name('sofa-show');
-
+    Route::get('sofa', 'AdminSofaController@list')->name('admin_sofa');
+    Route::get('sofa/create', 'AdminSofaController@create')->name('admin_sofa-create');
+    Route::post('sofa/store', 'AdminSofaController@store')->name('admin_sofa-store');
+    Route::get('sofa/edit', 'AdminSofaController@edit')->name('admin_sofa-edit');
+    Route::post('sofa/update', 'AdminSofaController@update')->name('admin_sofa-update');
+    Route::get('sofa/delete', 'AdminSofaController@delete')->name('admin_sofa-delete');
+    Route::get('sofa/show', 'AdminSofaController@show')->name('admin_sofa-show');
 
 });

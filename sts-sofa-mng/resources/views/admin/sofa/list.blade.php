@@ -14,7 +14,7 @@
 <div class="col-12">
     <div class="row">
         <div class="col-12 my-3">
-            <a class="" href="{{ route('sofa-create') }}"><button type="button" class="btn btn-primary">Thêm mới</button></a>
+            <a class="" href="{{ route('admin_sofa-create') }}"><button type="button" class="btn btn-primary">Thêm mới</button></a>
         </div>
     </div>
 </div>
@@ -68,9 +68,9 @@
                     </div>
                 </td>
                 <td>
-                <a class="mx-1" href="{{ route('sofa-show',['id' => $sofa->id]) }}"><i class="fas fa-eye"></i></a>
-                <a class="mx-1" href="{{ route('sofa-edit',['id' => $sofa->id]) }}"><i class="fas fa-pencil-alt"></i></a>
-                <a class="mx-1" href="{{ route('sofa-delete',['id' => $sofa->id]) }}"><i class="fas fa-trash-alt"></i></a></td>
+                <a class="mx-1" href="{{ route('admin_sofa-show',['id' => $sofa->id]) }}"><i class="fas fa-eye"></i></a>
+                <a class="mx-1" href="{{ route('admin_sofa-edit',['id' => $sofa->id]) }}"><i class="fas fa-pencil-alt"></i></a>
+                <a class="mx-1" href="{{ route('admin_sofa-delete',['id' => $sofa->id]) }}"><i class="fas fa-trash-alt"></i></a></td>
                 </tr>
             @endforeach
             </tbody>

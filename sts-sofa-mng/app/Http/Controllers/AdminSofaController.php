@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Sofa;
 use Illuminate\Http\Request;
 
-class SofaController extends Controller
+class AdminSofaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +19,7 @@ class SofaController extends Controller
         foreach ($sofas as &$sofa) {
             $sofa->files = json_decode($sofa->files);
         }
-        return view('sofa.list', ['sofas' => $sofas]);
+        return view('admin.sofa.list', ['sofas' => $sofas]);
     }
 
     /**
@@ -30,7 +30,7 @@ class SofaController extends Controller
     public function create()
     {
         //
-        return view('sofa.create');
+        return view('admin.sofa.create');
     }
 
     /**
@@ -66,7 +66,7 @@ class SofaController extends Controller
             ]
         );
 
-        return redirect()->route('sofa')->with('msg-success', 'thêm mới thành công!!');
+        return redirect()->route('admin_sofa')->with('msg-success', 'thêm mới thành công!!');
     }
 
     /**
@@ -82,7 +82,7 @@ class SofaController extends Controller
         foreach ($sofas as &$sofa) {
             $sofa->files = json_decode($sofa->files);
         }
-        return view('sofa.show', ['sofas' => $sofas]);
+        return view('admin.sofa.show', ['sofas' => $sofas]);
     }
 
     /**
@@ -96,7 +96,7 @@ class SofaController extends Controller
         $id = $request->input('id')?: 0;
         $sofas = DB::select('select * from tbl_sofas where id='.$id);
 
-        return view('sofa.edit', ['sofas' => $sofas]);
+        return view('admin.sofa.edit', ['sofas' => $sofas]);
     }
 
     /**
@@ -143,7 +143,7 @@ class SofaController extends Controller
             );
         }
         
-        return redirect()->route('sofa')->with('msg-success', 'chỉnh sửa thành công!!');
+        return redirect()->route('admin_sofa')->with('msg-success', 'chỉnh sửa thành công!!');
     }
 
     /**
@@ -157,6 +157,6 @@ class SofaController extends Controller
         $id = $request->input('id')?: 0;
         DB::table('tbl_sofas')->where('id', '=', $id)->delete();
 
-        return redirect()->route('sofa')->with('msg-warning', 'xóa thành công!!');
+        return redirect()->route('admin_sofa')->with('msg-warning', 'xóa thành công!!');
     }
 }

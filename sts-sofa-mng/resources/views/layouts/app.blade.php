@@ -26,7 +26,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link bg-light" href="{{ route('sofa') }}">QUẢN LÝ SOFA</a>
+                            <a class="nav-link bg-light" href="{{ route('admin_sofa') }}">QUẢN LÝ SOFA</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link bg-light" href="#">Link</a>
