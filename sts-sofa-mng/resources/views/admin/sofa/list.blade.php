@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.app')
+@extends('layouts.app-admin')
 
 @section('title', 'Page Welcom')
 
@@ -45,7 +45,7 @@
                 <th scope="col">Tên sản phẩm</th>
                 <th scope="col">Giá</th>
                 <th scope="col">Khuyến mãi</th>
-                <th scope="col">Giá bán</th>
+                <th scope="col">Giá bán thực tế</th>
                 <th scope="col">Loại sản phẩm</th>
                 <th scope="row">Hình ảnh sản phẩm</th>
                 <th scope="col"></th>
@@ -58,8 +58,8 @@
                 <td>{{ $sofa->masofa }}</td>
                 <td>{{ $sofa->name }}</td>
                 <td>{{ number_format($sofa->gia) }}</td>
-                <td>{{ number_format($sofa->khuyenmai) }}</td>
-                <td>{{ number_format($sofa->gia - $sofa->khuyenmai) }}</td>
+                <td>{{ number_format($sofa->gia - $sofa->giaban) }}</td>
+                <td>{{ number_format($sofa->giaban) }}</td>
                 <td>{{ $sofa->type }}</td>
                 <td><div>@foreach ($sofa->files as $file)
                         <img style="width: auto; height: 100px;" src="{{ asset($file) }}" class="img-fluid" alt="">

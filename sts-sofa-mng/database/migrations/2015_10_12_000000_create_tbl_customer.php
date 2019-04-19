@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTblSofa extends Migration
+class CreateTblCustomer extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,15 @@ class CreateTblSofa extends Migration
      */
     public function up()
     {
-        //if (!Schema::hasTable('tbl_sofas')) {
+        //if (!Schema::hasTable('tbl_customers')) {
          
-            Schema::create('tbl_sofas', function (Blueprint $table) {
+            Schema::create('tbl_customers', function (Blueprint $table) {
                 $table->bigIncrements('id');
-                $table->string('masofa');
-                $table->string('name');
-                $table->double('gia');  // don vi 1.000vnd
-                $table->double('giaban');
-                $table->integer('type');
-                $table->text('files');
-                $table->text('detail');
+                $table->string('tel');
+                $table->string('name')->nullable($value = true);
+                $table->string('email')->nullable($value = true);
+                $table->string('address')->nullable($value = true);
+                $table->string('note')->nullable($value = true);
 
                 $table->timestamps();
 

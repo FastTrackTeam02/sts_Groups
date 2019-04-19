@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.app')
+@extends('layouts.app-admin')
 
 @section('title', 'Page Welcom')
 
@@ -36,11 +36,11 @@
     </tr>
     <tr>
       <th scope="row">Khuyến mãi</th>
-      <td>{{ number_format($sofa->khuyenmai) }}</td>
+      <td>{{ number_format($sofa->gia - $sofa->giaban) }}</td>
     </tr>
     <tr>
       <th scope="row">Giá bán</th>
-      <td>{{ number_format($sofa->gia - $sofa->khuyenmai) }}</td>
+      <td>{{ number_format($sofa->giaban) }}</td>
     </tr>
     <tr>
       <th scope="row">Loại sản phẩm</th>

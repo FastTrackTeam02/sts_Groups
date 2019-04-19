@@ -1,4 +1,18 @@
 
+body {
+    background-color: white;
+}
+
+/* header */
+.carousel-item {
+    height: 20vh;
+    min-height: 30px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
 #fileshow img {
     max-height: 200px;
@@ -7,4 +21,65 @@
 
 .fas {
     font-size: 22px;
+}
+
+.sts-color-price
+{
+    font-size: 18px;
+    color: #f57224;
+}
+.sts-color-price-detail
+{
+    font-size: 24px;
+    color: #f57224;
+}
+
+.sts-img {
+    /* width: 50px;
+    height: 100%; */
+}
+.sts-img-list {
+    width: 50px;
+    height: auto;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.sts-img-main {
+    height: 400px;
+    width: auto;
+}
+.image-link {
+    cursor: zoom-in;
+}
+
+.section-title {
+    position: relative;
+    -js-display: flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.section-title b {
+    display: block;
+    -ms-flex: 1;
+    flex: 1;
+    height: 2px;
+    opacity: .1;
+    background-color: currentColor;
+}
+
+.section-title-center span {
+    margin: 0 15px;
+}
+
+.card a {
+    cursor: pointer;
 }

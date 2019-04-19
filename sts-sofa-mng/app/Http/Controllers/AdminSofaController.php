@@ -44,7 +44,7 @@ class AdminSofaController extends Controller
         $masofa = $request->input('masofa') ?: '';
         $name = $request->input('name') ?: '';
         $gia = $request->input('gia') ?: 0;
-        $khuyenmai = $request->input('khuyenmai') ?: 0;
+        $giaban = $request->input('giaban') ?: 0;
         $type = $request->input('type') ?: 1;
         $detail = $request->input('detail') ?: '';
         $paths = array();
@@ -59,10 +59,11 @@ class AdminSofaController extends Controller
             ['masofa'   => $masofa,
             'name'      => $name,
             'gia'       => $gia,
-            'khuyenmai' => $khuyenmai,
+            'giaban'    => $giaban,
             'type'      => $type,
-            'detail'      => $detail,
-            'files'      => json_encode($paths)
+            'detail'    => $detail,
+            'files'      => json_encode($paths),
+            'created_at' => now()
             ]
         );
 
@@ -112,7 +113,7 @@ class AdminSofaController extends Controller
         $masofa = $request->input('masofa') ?: '';
         $name = $request->input('name') ?: '';
         $gia = $request->input('gia') ?: 0;
-        $khuyenmai = $request->input('khuyenmai') ?: 0;
+        $giaban = $request->input('giaban') ?: 0;
         $type = $request->input('type') ?: 1;
         $detail = $request->input('detail') ?: '';
 
@@ -122,9 +123,10 @@ class AdminSofaController extends Controller
             ['masofa'   => $masofa,
             'name'      => $name,
             'gia'       => $gia,
-            'khuyenmai' => $khuyenmai,
+            'giaban'    => $giaban,
             'type'      => $type,
-            'detail'      => $detail
+            'detail'      => $detail,
+            'updated_at' => now()
             ]
         );
 

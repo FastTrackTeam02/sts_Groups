@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.app')
+@extends('layouts.app-admin')
 
 @section('title', 'Page Welcom')
 
@@ -28,11 +28,11 @@
         </div>
         <div class="form-group">
             <label>Giá</label>
-            <input name="gia" type="text" class="form-control" placeholder="">
+            <input name="gia" type="text" class="form-control" placeholder="Nhập giá gốc">
         </div>
         <div class="form-group">
-            <label>Khuyến mãi</label>
-            <input name="khuyenmai" type="text" class="form-control" placeholder="Nhập số tiền được giảm">
+            <label>Giá bán</label>
+            <input name="giaban" type="text" class="form-control" placeholder="Nhập giá bán thực tế">
         </div>
         <div class="form-group">
             <label>Loại sản phẩm</label>
